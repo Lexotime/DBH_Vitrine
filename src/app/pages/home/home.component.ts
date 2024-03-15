@@ -8,10 +8,21 @@ import AOS from 'aos';
 })
 export class HomeComponent implements OnInit {
 
+  public seeMenu = false;
+
   constructor(){}
 
   ngOnInit(): void {
     AOS.init();
+  }
+
+  toggleMenu(){
+    this.seeMenu = ! this.seeMenu;
+    if(this.seeMenu){
+      document.body.style.setProperty('overflow', 'hidden');
+    }else{
+      document.body.style.setProperty('overflow', 'scroll');
+    }
   }
 
 }

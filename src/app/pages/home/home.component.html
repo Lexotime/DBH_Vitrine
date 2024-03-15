@@ -1,12 +1,12 @@
 <!-- Big Header -->
 <section style="background-image: url('../../../assets/background.jpg')" class="relative w-full pb-8 bg-no-repeat bg-cover bg-center w-screen">
-    <div class="absolute inset-0 w-full h-full bg-sky-500 opacity-25"></div>
+   
 
     <!-- Mini Header -->
-    <div class="flex w-full p-8 flex justify-between items-center">
+    <div class="flex w-full p-8 flex justify-between items-center z-50">
         <!-- Here for the LOGO -->
         <img src="../../../assets/logo-dbh.png" alt="" class="w-[60px] h-[60px] rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="lg:hidden text-white w-8 h-8">
+        <svg (click)="this.toggleMenu()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="lg:hidden text-white w-8 h-8">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
         <span class="hidden lg:flex justify-between w-1/3">
@@ -144,4 +144,41 @@
     </div>
 
     <p class="text-sky-500 text-[18px]">2022 © Solution de DBH Tous droits réservés</p>
+</section>
+
+<!-- SECTION SIDE BAR -->
+<section *ngIf="this.seeMenu" class="flex w-full fixed inset-0 z-50 h-screen lg:hidden">
+    <svg (click)="this.toggleMenu()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-sky-500 absolute top-2 left-2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+    <div class="w-3/5 h-full bg-sky-100 rounded-tr-full flex flex-col justify-center">
+        <span class="flex w-full p-3 justify-between items-center">
+            <p class="text-[18px] text-sky-500">Accueil</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-sky-500">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+        </span>
+
+        <span class="flex w-full p-3 justify-between items-center">
+            <p class="text-[18px] text-sky-500">A propos de</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-sky-500">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+        </span>
+
+        <span class="flex w-full p-3 justify-between items-center">
+            <p class="text-[18px] text-sky-500">Nos services</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-sky-500">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+        </span>
+
+        <span class="flex w-full p-3 justify-between items-center">
+            <p class="text-[18px] text-sky-500">Contacts</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-sky-500">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+        </span>
+    </div>
+    <div (click)="this.toggleMenu()" class="w-2/5 h-full"></div>
 </section>
