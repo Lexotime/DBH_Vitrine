@@ -5,14 +5,14 @@
     <!-- Mini Header -->
     <div class="flex w-full p-8 flex justify-between items-center z-50">
         <!-- Here for the LOGO -->
-        <img src="../../../assets/logo-dbh.png" alt="" class="w-[60px] h-[60px] rounded-full">
+        <img src="../../../assets/logo-dbh.png" routerLink="/home" alt="" class="w-[60px] h-[60px] rounded-full">
         <svg (click)="this.toggleMenu()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="lg:hidden text-white w-8 h-8">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
         <span class="hidden lg:flex justify-between w-1/3">
-            <a class="text-white text-[18px]" href="#">Accueil</a>
+            <a routerLink="/home" class="text-white text-[18px]" href="#">Accueil</a>
             <a class="text-white text-[18px]" href="#">A propos de</a>
-            <a class="text-white text-[18px]" href="#">Nos services</a>
+            <a routerLink="/service" class="text-white text-[18px]" href="#">Nos services</a>
         </span>
 
         <span class="hidden lg:flex space-x-5 items-center">
@@ -143,7 +143,7 @@
         </span>
     </div>
 
-    <p class="text-sky-500 text-[18px]">2022 © Solution de DBH Tous droits réservés</p>
+    <p class="text-sky-500 text-[18px]">2024 © Solution de DBH Tous droits réservés</p>
 </section>
 
 <!-- SECTION SIDE BAR -->
@@ -152,7 +152,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
     </svg>
     <div class="w-3/5 h-full bg-sky-100 rounded-tr-full flex flex-col justify-center">
-        <span class="flex w-full p-3 justify-between items-center">
+        <span routerLink="/home" class="flex w-full p-3 justify-between items-center">
             <p class="text-[18px] text-sky-500">Accueil</p>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-sky-500">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
@@ -166,7 +166,7 @@
             </svg>
         </span>
 
-        <span class="flex w-full p-3 justify-between items-center">
+        <span routerLink="/service" class="flex w-full p-3 justify-between items-center">
             <p class="text-[18px] text-sky-500">Nos services</p>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-sky-500">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
